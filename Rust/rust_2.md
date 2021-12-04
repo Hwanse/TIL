@@ -11,6 +11,8 @@ Cargo는 초기에 공식 홈페이지 안내대로 공식 인스톨러를 사�
 $ cargo --version
 ```
 
+<br>
+
 ## Cargo를 이용한 프로젝트 생성
 
 Cargo를 사용하여 프로젝트 폴더 생성하기
@@ -29,8 +31,6 @@ hello_cargo
   - .gitignore (Cargo는 default로 Git을 VCS로 사용하며 해당 프로젝트 폴더를 새로운 git 저장소로 초기화한다)
   - Cargo.toml
 ```
-
-<br>
 
 TOML파일(Tom's Obvious, Minimal Language)포맷으로 작성된 Cargo.toml 파일은 Cargo의 환경설정 포맷이다.
 
@@ -51,6 +51,8 @@ authors = ["Your Name <you@example.com>"]
 해당 폴더 하위에 main.rs 파일이 있으며 처음으로 배웠던 Hello, world를 출력하는 프로그램이다. 이 파일은 Cargo가 자동으로 src폴더와 함께 생성하여 src폴더 하위에 위치시킨다.
 Cargo는 기본적으로 개발자가 작성한 소스 파일들이 src 폴더 안에 있을거라고 가정하며, 최상위 프로젝트 디렉토리는 README 파일, 라이센스 정보, 환경 파일 등등 코드와는 관련 없는 다른 파일들이 위치하여 프로젝트를 조직화하는 데에 도움을 준다.
 
+<br>
+
 ## Cargo 프로젝트 빌드 및 실행
 
 - cargo build: 프로젝트를 빌드하는 명렁어. 프로젝트 빌드 완료 시 `target/debug/[프로젝트명]` 와 같은 형식의 경로로 실행 파일을 생성한다. 따라서 해당 파일을 명령어를 통해 바로 실행이 가능하다
@@ -60,6 +62,7 @@ Cargo는 기본적으로 개발자가 작성한 소스 파일들이 src 폴더 �
   - `cargo build`는 주로 개발하는 당시 환경에서 확인하기 위한 용도
   - `cargo build --release`는 배포할 때 사용되는 최종 프로그램을 빌드하기 위한 용도
     
+<br>
 
 ### 참조
 - https://rinthel.github.io/rust-lang-book-ko/ch01-03-hello-cargo.html

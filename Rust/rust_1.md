@@ -6,9 +6,13 @@
 - LLVM(Low Lever Virtual Machine: 저레벨 가상머신) 사용
 - 러스트는 안전하고, 빠르고, 병렬성에 초점을 둔 시스템 프로그래밍 언어
 
+<br>
+
 ## Rust 설치
 러스트 공식 홈페이지 설치 가이드 참조
 - https://www.rust-lang.org/learn/get-started
+
+<br>
 
 ## Hello World 실행해보기
 
@@ -40,7 +44,7 @@ Hello, world!
 6. 컴파일이 완료되면 실행 파일이 생성된다
 7. 러스트는 ahead-of-time compiled 언어로, 이는 프로그램을 컴파일하여 만들어진 실행파일이 다른 환경의 컴퓨터에서 러스트가 설치되어 있지 않아도 바로 실행될 수 있다는 것을 말한다.
 
-
+<br>
 
 ### 참조
 - https://rinthel.github.io/rust-lang-book-ko/

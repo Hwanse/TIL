@@ -66,7 +66,7 @@ The value of x is: 6
 
 ```rust
 fn main() {
-const MAX_POINTS: u32 = 100_000;
+    const MAX_POINTS: u32 = 100_000;
 }
 ```
 

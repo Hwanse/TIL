@@ -121,3 +121,8 @@ $ cargo run
      Running `target/debug/variables`
 spaces length : 3
 ```
+
+<br>
+
+### 참조
+- https://rinthel.github.io/rust-lang-book-ko/ch01-03-hello-cargo.html

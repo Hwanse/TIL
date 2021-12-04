@@ -74,6 +74,10 @@ const MAX_POINTS: u32 = 100_000;
 
 러스트에서는 'let'키워드를 사용하여 같은 변수명으로 반복하여 선언하는 것이 가능하며 이를 "변수를 `shadowing`한다"라고 말한다. 러스트 개발자들은 이를 첫 변수가 두 번째 변수에 의해 shadowed 됐다고 표현한다.
 
+기본적으로 let 키워드만 사용하여 변수를 선언하고 불변 변수이기 때문에 해당 변수에 새 값을 대입하려 하면 컴파일시 에러가 발생된다. 하지만 위와 같이 shadowing을 활용하여 똑같은 변수명으로 새로운 값을 대입하는 방식과 이는 'mut'으로 선언하는 것과 2가지 차이가 있다.    
+
+첫째, mut을 사용하는 것과 같은 효과를 볼 수 있지만, 이후 마지막으로 선언된 변수는 불변성의 특징을 가져갈 수 있다.
+
 ```rust
 fn main() {
     let x = 5;
@@ -96,15 +100,22 @@ $ cargo run
 The value of x is: 12
 ```
 
-기본적으로 let 키워드만 사용하여 변수를 선언하고 불변 변수이기 때문에 해당 변수에 새 값을 대입하려 하면 컴파일시 에러가 발생된다. 하지만 위와 같이 shadowing을 활용하여 똑같은 변수명으로 새로운 값을 대입하는 방식과 이는 'mut'으로 선언하는 것과 2가지 차이가 있다.    
-첫째, mut을 사용하는 것과 같은 효과를 볼 수 있지만, 이후 마지막으로 선언된 변수는 불변성의 특징을 가져갈 수 있다.
+
 둘째, mut 사용할 경우에는 변수의 자료형을 변경할 수 없지만, let 키워드를 다시 사용하여 새 변수 선언을 통해 shadowing을 활용하면 변수의 자료형을 변경할 수 있다.
 
 ```rust
-
-#![allow(unused)]
 fn main() {
     let spaces = "   ";
     let spaces = spaces.len();
 }
+```
+
+다음은 프로그램 실행 결과
+
+```
+$ cargo run
+   Compiling variables v0.1.0 (/Users/kimhs/study-work/rust-study/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.37s
+     Running `target/debug/variables`
+spaces length : 3
 ```

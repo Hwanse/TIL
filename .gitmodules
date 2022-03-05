@@ -1,0 +1,3 @@
+[submodule "nats-study"]
+	path = nats-study
+	url = https://github.com/Hwanse/nats-study.git
